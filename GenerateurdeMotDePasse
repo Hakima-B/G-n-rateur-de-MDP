@@ -1,0 +1,55 @@
+import java.util.Random;
+import java.util.Scanner;
+
+public class GenerateurMotDePasse {
+
+    public static void main(String[] args) {
+
+// Caractères possible
+
+        String lettres = "abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ";
+        String chiffres = "0123456789";
+        String symboles = "!@#$%^&*()-_=+[]{};:,.<>?/|";
+        String tousCaracteres = lettres + chiffres + symboles;
+
+// Entrée utilisateur
+
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Bienvenue dans le générateur de mot de passe !");
+        System.out.print("Entrez la longueur souhaitée pour le mot de passe : ");
+
+        try {
+            int longueur = scanner.nextInt();
+
+// Vérification de la longueur minimale
+
+            if (longueur < 4) {
+                System.out.println("Erreur : La longueur doit être d'au moins 4 caractères.");
+            } else {
+
+// Génération du mot de passe
+
+                String motDePasse = genererMotDePasse(longueur, tousCaracteres);
+                System.out.println("Votre mot de passe généré est : " + motDePasse);
+            }
+        } catch (Exception e) {
+            System.out.println("Erreur : Vous devez entrer un nombre valide.");
+        } finally {
+            scanner.close();
+        }
+    }
+
+
+    public static String genererMotDePasse(int longueur, String tousCaracteres) {
+        Random random = new Random();
+        StringBuilder motDePasse = new StringBuilder();
+
+        for (int i = 0; i < longueur; i++) {
+            int index = random.nextInt(tousCaracteres.length());
+            motDePasse.append(tousCaracteres.charAt(index));
+        }
+
+        return motDePasse.toString();
+    }
+}
