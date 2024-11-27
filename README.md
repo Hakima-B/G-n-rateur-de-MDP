@@ -1,15 +1,31 @@
 # Générateur de mots de passe
 
-Bienvenue dans le **Générateur de mots de passe** ! Ce projet vous permet de créer des mots de passe sécurisés générés aléatoirement.
+Ce projet est un petit programme qui génère des mots de passe sécurisés. Il a été créé pour m'entraîner à programmer en Java.
 
 
-## Fonctionnalités
+## Fonctionnalités:
 
-- Génère des mots de passe de longueur personnalisable.
-- Inclut des options pour :
-  - Lettres majuscules.
-  - Lettres minuscules.
-  - Nombres.
-  - Caractères spéciaux.
-- Interface simple et intuitive.
-- Assure un niveau de sécurité élevé pour vos mots de passe.
+- Génération de mots de passe aléatoires.  
+- Choix de la longueur du mot de passe.  
+- Possibilité d’inclure ou non :  
+  - Lettres majuscules.  
+  - Lettres minuscules.  
+  - Chiffres.  
+  - Caractères spéciaux.  
+
+
+## Comment l'utiliser ?
+
+1. Télécharger le projet.  
+2. Ouvrir le fichier dans un éditeur compatible avec Java (comme IntelliJ IDEA).  
+3. Lancer le programme et suivre les instructions dans la console.  
+
+
+## L'objectif du projet:
+
+Ce projet fait partie de mon apprentissage du développement d’applications. J’ai voulu commencer par un programme simple qui est aussi utile au quotidien.
+
+
+## Auteur  
+
+Projet réalisé par Hakima, débutante en programmation. 😊
